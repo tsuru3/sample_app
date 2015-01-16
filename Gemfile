@@ -6,8 +6,14 @@ gem 'rails', '4.0.5'
 
 # Use sqlite3 as the database for Active Record
 group :development, :test do
-	gem 'sqlite3', '1.3.8'
-	gem 'rspec-rails','2.13.1'
+  gem 'sqlite3', '1.3.8'
+  gem 'rspec-rails', '2.13.1'
+#  gem 'guard-rspec', require:false
+  gem 'guard','2.6.1'
+  gem 'guard-rspec','2.5.0'
+  gem 'spork-rails', '4.0.0'
+  gem 'guard-spork', '1.5.0'
+  gem 'childprocess', '0.3.6'
 end
 
 group :test do
@@ -38,7 +44,7 @@ gem 'jbuilder', '1.0.2'
 
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
-  gem 'sdoc', require: false
+  gem 'sdoc', '0.3.20',require: false
 end
 
 group :production do
